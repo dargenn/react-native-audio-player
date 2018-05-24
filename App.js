@@ -21,19 +21,19 @@ class PlaylistItem {
 
 const PLAYLIST = [
 	new PlaylistItem(
-		'Comfort Fit - “Sorry”',
-		'https://s3.amazonaws.com/exp-us-standard/audio/playlist-example/Comfort_Fit_-_03_-_Sorry.mp3',
-		'https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem-700x626.png'
+		'Example 1',
+		'https://allthingsaudio.wikispaces.com/file/view/Shuffle%20for%20K.M.mp3/139190697/Shuffle%20for%20K.M.mp3',
+		'https://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'
 	),
 	new PlaylistItem(
-		'Mildred Bailey – “All Of Me”',
-		'https://ia800304.us.archive.org/34/items/PaulWhitemanwithMildredBailey/PaulWhitemanwithMildredBailey-AllofMe.mp3',
-		'https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem-700x626.png'
+		'Example 2”',
+		'https://allthingsaudio.wikispaces.com/file/view/Crazy%20game%20.mp3/139084133/Crazy%20game%20.mp3',
+		'https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg'
 	),
 	new PlaylistItem(
-		'Podington Bear - “Rubber Robot”',
-		'https://s3.amazonaws.com/exp-us-standard/audio/playlist-example/Podington_Bear_-_Rubber_Robot.mp3',
-		'https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem-700x626.png'
+		'Example 3”',
+		'https://allthingsaudio.wikispaces.com/file/view/Hugo_Droopy_Contini_-_03_-_Sandu.mp3/139218831/Hugo_Droopy_Contini_-_03_-_Sandu.mp3',
+		'https://www.samcodes.co.uk/project/geometrize-haxe-web/assets/images/xseagull.jpg.pagespeed.ic.iK66EGA15-.jpg'
 	),
 ];
 
