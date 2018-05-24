@@ -21,17 +21,17 @@ class PlaylistItem {
 
 const PLAYLIST = [
 	new PlaylistItem(
-		'Example 1',
-		'https://allthingsaudio.wikispaces.com/file/view/Shuffle%20for%20K.M.mp3/139190697/Shuffle%20for%20K.M.mp3',
-		'https://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'
+		'TRI PALOSKI',
+		'http://muzmo.ru/get/music/20180106/muzmo_ru_TRI_POLOSKI_-_TRI_POLOSKI_KOLM_TRIIPU_THREE_STRIPE_52428952.mp3',
+		'https://steamuserimages-a.akamaihd.net/ugc/866242801007915933/ACCF95916C3C244591722129B2358B253C3C1F42/'
 	),
 	new PlaylistItem(
-		'Example 2”',
+		'Crazy game',
 		'https://allthingsaudio.wikispaces.com/file/view/Crazy%20game%20.mp3/139084133/Crazy%20game%20.mp3',
 		'https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg'
 	),
 	new PlaylistItem(
-		'Example 3”',
+		'Sandu',
 		'https://allthingsaudio.wikispaces.com/file/view/Hugo_Droopy_Contini_-_03_-_Sandu.mp3/139218831/Hugo_Droopy_Contini_-_03_-_Sandu.mp3',
 		'https://www.samcodes.co.uk/project/geometrize-haxe-web/assets/images/xseagull.jpg.pagespeed.ic.iK66EGA15-.jpg'
 	),
@@ -303,7 +303,7 @@ export default class App extends Component {
 							<MaterialIcons
 								name="fast-rewind"
 								size={40}
-								color="#56D5FA"
+								color="#000000"
 							/>
 						</View>
 					</TouchableHighlight>
@@ -318,13 +318,13 @@ export default class App extends Component {
 								<MaterialIcons
 									name="pause"
 									size={40}
-									color="#56D5FA"
+									color="#000000"
 								/>
 							) : (
 								<MaterialIcons
 									name="play-arrow"
 									size={40}
-									color="#56D5FA"
+									color="#000000"
 								/>
 							)}
 						</View>
@@ -339,7 +339,7 @@ export default class App extends Component {
 							<MaterialIcons
 								name="stop"
 								size={40}
-								color="#56D5FA"
+								color="#000000"
 							/>
 						</View>
 					</TouchableHighlight>
@@ -353,7 +353,7 @@ export default class App extends Component {
 							<MaterialIcons
 								name="fast-forward"
 								size={40}
-								color="#56D5FA"
+								color="#000000"
 							/>
 						</View>
 					</TouchableHighlight>
@@ -389,7 +389,7 @@ export default class App extends Component {
 							<MaterialIcons
 								name="volume-down"
 								size={40}
-								color="#56D5FA"
+								color="#000000"
 							/>
 						</View>
 						<Slider
@@ -403,7 +403,7 @@ export default class App extends Component {
 							<MaterialIcons
 								name="volume-up"
 								size={40}
-								color="#56D5FA"
+								color="#000000"
 							/>
 						</View>
 					</View>
