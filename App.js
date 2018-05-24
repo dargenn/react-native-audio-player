@@ -43,7 +43,6 @@ const DISABLED_OPACITY = 0.5;
 const FONT_SIZE = 14;
 const LOADING_STRING = 'Loading...';
 const BUFFERING_STRING = 'Buffering...';
-const RATE_SCALE = 3.0;
 
 export default class App extends Component {
 	constructor(props) {
@@ -62,7 +61,6 @@ export default class App extends Component {
 			isLoading: true,
 			fontLoaded: false,
 			volume: 1.0,
-			rate: 1.0,
 			portrait: null,
 		};
 	}
@@ -95,7 +93,6 @@ export default class App extends Component {
 		const source = { uri: PLAYLIST[this.index].uri };
 		const initialStatus = {
 			shouldPlay: playing,
-			rate: this.state.rate,
 			volume: this.state.volume,
 		};
 
@@ -135,7 +132,6 @@ export default class App extends Component {
 				shouldPlay: status.shouldPlay,
 				isPlaying: status.isPlaying,
 				isBuffering: status.isBuffering,
-				rate: status.rate,
 				volume: status.volume,
 			});
 			if (status.didJustFinish) {
@@ -195,20 +191,6 @@ export default class App extends Component {
 		if (this.playbackInstance != null) {
 			this.playbackInstance.setVolumeAsync(value);
 		}
-	};
-
-	_trySetRate = async rate => {
-		if (this.playbackInstance != null) {
-			try {
-				await this.playbackInstance.setRateAsync(rate);
-			} catch (error) {
-				// Rate changing could not be performed, possibly because the client's Android API is too old.
-			}
-		}
-	};
-
-	_onRateSliderSlidingComplete = async value => {
-		this._trySetRate(value * RATE_SCALE);
 	};
 
 	_onSeekSliderValueChange = value => {
@@ -432,27 +414,6 @@ export default class App extends Component {
 						styles.buttonsContainerBottomRow,
 					]}
 				>
-					<View>
-						<MaterialIcons
-							name="call-received"
-							size={40}
-							color="#56D5FA"
-						/>
-					</View>
-					<Slider
-						style={styles.rateSlider}
-						value={this.state.rate / RATE_SCALE}
-						onSlidingComplete={this._onRateSliderSlidingComplete}
-						thumbTintColor="#000000"
-						minimumTrackTintColor="#4CCFF9"
-					/>
-					<View>
-						<MaterialIcons
-							name="call-made"
-							size={40}
-							color="#56D5FA"
-						/>
-					</View>
 				</View>
 			</View>
 		);
@@ -525,8 +486,5 @@ const styles = StyleSheet.create({
 	},
 	buttonsContainerBottomRow: {
 		alignSelf: 'stretch',
-	},
-	rateSlider: {
-		width: DEVICE_WIDTH - 80,
-	},
+	}
 });
